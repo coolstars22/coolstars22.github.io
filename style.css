@@ -3,6 +3,30 @@ body {
   background-color: black;
 }
 
+#element{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    margin-left: -250px; /* Half the width */
+    margin-top: -100px; /* Half the height */
+    animation: 5s ease 0s normal forwards 1 fadein;
+    -webkit-animation: 105s ease 0s normal forwards 1 fadein;
+    opacity: 1
+}
+
+@keyframes fadein{
+    0%{opacity:0}
+    80%{opacity:0}
+    100%{opacity:1}
+}
+
+@-webkit-keyframes fadein{
+    0%{opacity:0}
+    80%{opacity:0}
+    100%{opacity:1}
+}
 
 .star {
   position: absolute;
@@ -46,16 +70,17 @@ body {
     }
 }
 
+
 /* Set the animation & hide the logo */
 .logo {    
     z-index: 1;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 322px;
-   height: 186px;
-   margin-top: -93px; /* Half the height */
-   margin-left: -161px; /* Half the width */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 322px;
+    height: 186px;
+    margin-top: -93px; /* Half the height */
+    margin-left: -161px; /* Half the width */
     animation: logo 9s ease-out 9s;
     opacity: 0;
 }
