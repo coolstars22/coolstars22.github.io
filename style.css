@@ -7,24 +7,22 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 200px;
-    margin-left: -250px; /* Half the width */
-    margin-top: -100px; /* Half the height */
-    animation: 5s ease 0s normal forwards 1 fadein;
-    -webkit-animation: 105s ease 0s normal forwards 1 fadein;
-    opacity: 1
+    width: 600px;
+    height: 430px;
+    margin-left: -300px; /* Half the width */
+    margin-top: -215px; /* Half the height */
+    animation: 60s ease 70s normal forwards 1 fadein;
+    -webkit-animation: 60s ease 70s normal forwards 1 fadein;
+    opacity: 0
 }
 
 @keyframes fadein{
     0%{opacity:0}
-    80%{opacity:0}
     100%{opacity:1}
 }
 
 @-webkit-keyframes fadein{
     0%{opacity:0}
-    80%{opacity:0}
     100%{opacity:1}
 }
 
