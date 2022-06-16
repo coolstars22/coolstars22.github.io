@@ -11,8 +11,8 @@ body {
     height: 430px;
     margin-left: -300px; /* Half the width */
     margin-top: -215px; /* Half the height */
-    animation: 60s ease 70s normal forwards 1 fadein;
-    -webkit-animation: 60s ease 70s normal forwards 1 fadein;
+    animation: 80s ease 65s normal forwards 1 fadein;
+    -webkit-animation: 80s ease 65s normal forwards 1 fadein;
     opacity: 0
 }
 
