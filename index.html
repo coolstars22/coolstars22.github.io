@@ -1,58 +1,802 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Cool Stars 22 SD Opening Crawl</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<!--
-<p>
-  <a style="color: white; text-decoration: none; " class="btn btn-outline-primary btn-xs" href="./landing.html">
-      Skip Intro
-  </a>
-</p>
--->
-<p>
-  <span style="color: white; text-decoration: none; font-size: 24px">June 24-28, 2024</span>
-</p>
-<p>
-  <span style="color: white; text-decoration: none; font-size: 24px">San Diego, CA, USA</span>
-</p>
-<p url="https://twitter.com/coolstars22">
-  <a style="color: '33FFE6'; text-decoration: none; font-size: 24px" href="https://twitter.com/coolstars22">Follow @coolstars22 for updates</a>
-</p>
-<p url="https://twitter.com/coolstars22">
-  <a style="color: '33FFE6'; text-decoration: none; font-size: 24px" href="https://groups.google.com/g/coolstars22">Join the Google Group mailing list</a>
-</p>
-<body>
-<!-- partial:index.partial.html -->
-<section class="intro">
-  A long time from now, in a city far, far away....
-</section>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <meta name="description" content="Cool Stars 22, workshop, conference">
+    <meta name="author" content="CS22 LOC">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Welcome</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="js/chart.js"></script>
 
-<section class="logo">
-      <img src="img/CSalpha2.6.png">
-</section>
+    
 
-<!-- Change the text to your liking -->
-<div id="board">  
-  <div id="content">
-    <p id="episode">Episode XXII</p>
-    <p id="title">SAN DIEGO</p>
-    <br>
-    <!-- And make it cheesy ! -->
-    <p id='textbody'>It is a time of scientific discovery throughout the Galaxy. Since Cool Stars 21, data from the James Webb Space Telescope is flowing, the Rubin Observatory Legacy Survey of Space and Time has seen first-light, and Euclid has launched.</p> 
-    <p id='textbody'>Major advances in theoretical and computational astrophysics have occurred. Now, equipped with the ultimate scientific tools, astrophysicists have enough power to unlock the secrets of the Universe.</p> 
-    <p id='textbody'>There is much to rejoice about, however, something is brewing in San Diego. A small group of astronomers have been planning something for 2024....</p>        
-  </div>  
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+
+  <body>
+  <div class="sticky">
+    <!-- NAVBAR ================================================== -->
+    <div class="top-bar">
+      <div class="container clearfix">
+	<a href="mailto:coolstars22sd@gmail.com" target="_top">coolstars22sd@gmail.com</a>
+        <ul class="social">
+          <!-- <li><a href="https://www.facebook.com/groups/1464538487100756/" class="fb"></a></li> -->
+          <li><a href="https://twitter.com/coolstars22" class="tw"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top clearfix" role="navigation">
+            <div class="navbar-header clearfix">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1><a class="navbar-brand" href="index.html"></a></h1>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+		
+		<li><a href="index.html">Welcome</a></li>
+		
+		<!--<li><a href="participants.html">Participants</a></li>
+		
+		<li><a href="program.html">Program</a></li>
+		
+		<li><a href="splinters.html">Splinters</a></li>
+		
+		<li><a href="hybrid.html">Hybrid format</a></li>
+		
+		<li><a href="travel.html">Venue</a></li>
+		
+		<li><a href="excursions.html">Social events</a></li>-->
+		
+               </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    
+
+    <!-- Carousel ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+	
+	<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+	
+	<li data-target="#myCarousel" data-slide-to="2"></li>
+	
+	<!--<li data-target="#myCarousel" data-slide-to="3"></li>
+	
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+	
+	<li data-target="#myCarousel" data-slide-to="5"></li>
+
+	<li data-target="#myCarousel" data-slide-to="6"></li>
+	
+	<li data-target="#myCarousel" data-slide-to="7"></li>
+	
+	<li data-target="#myCarousel" data-slide-to="8"></li>-->
+	
+      </ol>
+      <div class="carousel-inner">
+	
+        <div class="item active">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-1.jpeg" alt="loading image">
+          <img src="images/slide-1.jpeg" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-2.jpeg" alt="loading image">
+          <img src="images/slide-2.jpeg" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	     <!--
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-2.png" alt="loading image">
+          <img src="images/slide-2.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-3.png" alt="loading image">
+          <img src="images/slide-3.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-4.png" alt="loading image">
+          <img src="images/slide-4.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-5.png" alt="loading image">
+          <img src="images/slide-5.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-6.png" alt="loading image">
+          <img src="images/slide-6.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+	
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:slide images/slide-7.png" alt="loading image">
+          <img src="images/slide-7.png" alt="nice pictures of Toulouse and the conference venue" />
+        </div>
+      -->
+	
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+    <div class="container clearfix mb-20">
+
+             <div class="c12 row">
+        <p style="font-size: 50px; font-family: varino" class="intro-text">COOL STARS 22</p>
+       </div>
+       <div class="c12 row">
+        <p class="intro-text">24-28 June 2024, San Diego, California, USA</p>
+       </div>
+       <div class="c12 row">
+        <p class="welcome-text">The "Cambridge Workshops of Cool Stars, Stellar Systems and the Sun" are held biennially and have evolved to be the premier conference series for cool star research.</p>
+       </div>
+
+       <!-- 
+       <div class="c12 row">
+	 <p><strong><big>We are thrilled to announce that CS23 will be
+	 held in ???!
+	 </big></strong></p>	 
+       </div>
+       -->
+       
+       <div class="c12 row">
+	 <p><strong><big>The next edition of the Cool Stars conference, Cool Stars 22,
+	 will be held in a hybrid format (both in-person and online) in
+	 San Diego in 2024, from the 24th to the 28th of June.  Please
+	  <a
+	 href="https://t.co/gi4bOAF4Sb">join
+	 the Google Group mailing list</a> if you wish to have news
+	 and updates about the conference.
+	 </big></strong></p>	 
+       </div>
+       &nbsp
+
+       <div class="c12 row">
+	 <!-- 
+	 <p><strong><big><a href="registration.html">Remote registration</a>
+	  is still open until June 30th.</big></strong></p>
+	 -->
+	 
+	 <!-- 
+	 <p><strong><big><span style="color: #00629B;"> Warning!</span> Several SOC members of splinters
+ 	 have received fraudulent phone calls proposing to book
+ 	 flights and hotels. They pretend to work with the organisers
+ 	 of CS22, which is not the case. It is likely that
+ 	 they got your name and institute from this website, and
+ 	 expect to get your credit card details. We recommend to be
+ 	 extremely careful, and to not provide any personal details to them!
+ 	 </big></p></strong>
+	 -->
+
+	 <!--
+	 &nbsp
+	 <p><strong><big><span style="color: #00629B;"> CORONAVIRUS INFORMATION:</span></big></strong></p>
+	 -->
+	 <!--
+	 <p><strong><big>The organizers are monitoring daily the
+	 evolution of coronavirus worldwide and how this may affect
+	 international travel and large meetings. At the moment, most
+	 effective travel bans do not have a known duration and may be
+	 lifted before the date of the CS22 conference and as of today
+	 (March 11th) we have not been asked by the French government
+	 or the organizing Research institutes to cancel/postpone the
+	 conference. As a consequence, CS22 is still scheduled to be
+	 held as planned on the week of 22nd of June
+	 2020.</big></strong></p>
+	 -->
+	 
+	 <!--
+	 <p><strong><big>We, therefore, encourage everyone to submit
+	 abstracts and register. Any registration will be 100%
+	 refunded if (a) the meeting has to be cancelled or (b) if you
+	 decide to cancel your participation less than 60 days after
+	 your registration.</big></strong></p>
+	 -->
+	 
+       </div>
+       
+       <div class="c12 row">
+
+	<!--
+        <p>Video recordings and slides for most talks are posted. See links
+        for each abstract on the <a href="abstracts.html">abstract
+        page.</a></p>
+
+        <p>Please
+        submit <a href="contributions.html#Proceedings">proceedings</a>
+        until <strong>November 15th (deadline extended)</strong>. Check out our <a href="proceedings.html">detailed instructions</a>.</p>
+       </div>
+       -->
+       
+      <!-- 
+       <div class="c12 row">
+  <p class="button-list">
+    <a href="docs/CS22booklet.pdf" class="button">Abstract booklet (pdf)</a>
+    <a href="https://cs22-virtual.inviteo.fr/" target="_blank"class="button">Hybrid platform</a>
+    <a href="docs/CS22photo.jpg" class="button">Group photo (26 Mo)</a>
+    <a href="zenodo.html" class="button">Submit a proceeding</a>
+  </p>
 </div>
-<!-- partial -->
-  <script  src="./script.js"></script>
-  <div id=element>
-    <img src="img/CS22SD_2.png">
-<!--
-    <meta http-equiv="refresh" content="90; url = ./landing.html" />
-  </div>
 -->
-</body>
+      <!-- 
+<p>
+<big>
+<big>
+<strong>
+We are thrilled to announce that pre-registration is now <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-lQMuclciAj-722TXzeZ0s8OC-6_uK_sjKtakZbj3HsHZTg/viewform?usp=sf_link/">open</a>!
+</strong>
+</big>
+</big>
+</p>
+-->
+
+
+<div class="c12 row">
+  SOC and LOC plan the following <strong>important dates</strong> (subject to change):
+  <ul class="listing">
+    <li>October 2023: call for splinter sessions</li>
+    <li>November 2023: registration, abstract submission for main conference, and travel grant requests open</li>
+    <li>December 2023: deadline for splinter session proposal</li>
+    <li>January 2024: list of selected splinter sessions announced</li>
+    <li>February 2024: deadline for travel grant support</li>    
+    <li>March 2024: announcement of selected grantees</li>    
+    <li>April 2024: abstract submission deadline for plenary talks</li>
+    <li>April 2024: end of early-bird registration fees</li>
+    <li>announcement of selected talks for plenary sessions: coming very soon!</li>
+    <li>May 2024 (23h59 PST): poster abstract submission deadline</li>
+    <li>May 2024 (23h59 PST): end of regular registration fees</li>
+    <li>May 2024 (23h59 PST): end of in-person registration</li>
+    <li>June 2024: opening of the hybrid platform</li>
+    <li>June 2024 (23h59 PST): end of virtual registration</li>
+  </ul>
+</div>
+
+<!--
+<div class="c12 row">
+  If you are interested in proposing to <strong>host Cool Stars 22</strong> please
+  follow <a href="#CS22"> this link</a> for detailed instructions
+  on how to apply.
+</div>
+-->
+
+<!--
+<div class="c12 row">
+  SOC and LOC plan the following <strong>important dates</strong>:
+  <ul class="listing">
+    <li>13 March 2020: abstract submission deadline</li>
+    <li>16 March 2020: announcement of selected grantees</li>
+    <li>30 March 2020: announcement of selected talks (plenary sessions)</li>
+    <li>04 April 2020: end of early-bird registration fees</li>
+    <li>18 May 2020: end of regular registration fees</li>
+    <li>14 June 2020: poster submission deadline</li>
+    <li>14 June 2020: end of registration</li>
+  </ul>
+</div>
+-->
+
+<!-- 
+<div class="c12 row">
+  SOC and LOC plan the following <strong>important dates</strong>:
+  <ul class="listing">
+    <li>Early October 2019: call for splinter sessions</li>
+    <li>9 December 2019: deadline for submission of splinter sessions</li>
+    <li>15 January 2020: announcement of selected splinter sessions</li>
+    <li>January 2020: registration opens (early bird fees)</li>
+    <li>January 2020: opening of abstract submission to main conference and splinters</li>
+    <li>Early February 2020: deadline for travel grant support request</li>
+    <li>Early March 2020: abstract submission deadline</li>
+    <li>Mid March 2020: normal registration fee</li>
+    <li>Mid March 2020: announcement of program and selected grantees</li>
+    <li>Early May 2020: late registration fee</li>
+  </ul>
+</div>
+-->
+
+      <!-- 
+      <h2><span>Cool Stars 22 Covid Policies</span></h2>
+      Relevant information about the health control system
+      at the French border will be found <a
+      href="https://www.interieur.gouv.fr/covid-19-international-travel/"
+      target="_blank">at this link</a>. In particular,
+      <ul class="listing">
+	<li>for people vaccinated within the meaning of European
+      regulations, proof of a complete vaccination schedule is
+      currently sufficient to travel to France, regardless of the
+	country of origin (no more tests is required upon departure).
+	</li>
+	<li>for unvaccinated people, it remains mandatory to
+      present a negative test to travel to France, but the measures on
+      arrival (test, isolation) are lifted when arriving from
+      countries on the "green" list, which are characterized by a moderate
+	circulation of the virus (a frequently updated list and map of countries in the
+      green/orange/red lists will be found at the same <a href="https://www.interieur.gouv.fr/covid-19-international-travel/"
+      target="_blank">link</a> as above).
+	</li>
+	<li>when unvaccinated travelers come from a country on the
+      "orange" list, a compelling reason justifying the need to come
+	to France must be given. They may still be subject to a random
+	test on arrival.
+	Travelers who are tested positive will have to isolate themselves.</li>
+      </ul>
+-->
+      
+      </p>
+      
+      <h2><span>What is "Cool Stars"?</span></h2>
+      <p>The next edition of the conference series "Cool Stars,
+      Stellar Systems and the Sun" (CS 22) will be held in a
+      <a href="hybrid.html">hybrid
+	 format</a>
+           in San Diego
+      from June 4 to 9 2024, 44 years after its first edition in Cambridge (USA). This first edition was shortly followed that same year by a workshop on "Solar Phenomena in Stars and Stellar Systems" that took place in the southern French countryside, in a small village called Bonas. Both meetings are often considered as the starting point of this exceptionally successful conference series, where approximately 400 international experts in Low-Mass Stars, Solar Physics, and Exoplanets meet every other year to exchange ideas in a cross-disciplinary and friendly environment. We will have CS 22 back in the United States, approimxately as far as you can go from Cambridge, but still remain in the continentaul US. San Diego will be hosting the next Cool Stars, jointly between UCSD and SDSU. We will also be celebrating the creation of the newest Astronomy & Astrophysics Department in the UC system!
+      </p>
+
+      <h2><span>SOC</span></h2>
+      <div class="row c12">
+	<p>To contact the SOC or LOC write
+	to: <a href="mailto:coolstars22sd@gmail.com">coolstars22sd@gmail.com</a></p>
+      </div>
+      <div class="row">
+	<div class="c6">
+	  <ul class="listing">
+	    
+      <li><span style="color: #00629B;">Ruth Angus</span> - American Museum of Natural History</li>
+
+	    <li><span style="color: #00629B;">Chas Beichman</span> - Jet Propulsion Laboratory</li>
+	    
+	    <li><span style="color: #00629B;">Jérôme Bouvier</span> - Institut de Planétologie et d&#39;Astrophysique de Grenoble</li>
+	    
+	    <li><span style="color: #00629B;">Allan Sacha Brun</span> - CEA Saclay</li>
+      
+      <li><span style="color: #00629B;">Adam Burgasser (SOC co-Chair)</span> - University of California San Diego</li>
+	    
+	    <li><span style="color: #00629B;">José Antonio Caballero</span> - Centro de Astrobiología</li>
+	    
+      <li><span style="color: #00629B;">Jim Davenport</span> - University of Washington</li>
+
+	    <li><span style="color: #00629B;">Andrea Dupree</span> - Harvard-Smithsonian Center for Astrophysics</li>
+
+      <li><span style="color: #00629B;">Greg Feiden</span> - University of North Georgia</li>
+
+      <li><span style="color: #00629B;">Clémence Fontanive</span> - University of Montréal</li>
+      
+      <li><span style="color: #00629B;">Eileen Gonzales</span> - San Francisco State University</li>
+
+      <li><span style="color: #00629B;">Moira Jardine</span> - University of Saint Andrews</li>  
+	 
+      <li><span style="color: #00629B;">Quinn Konopacky (SOC co-Chair)</span> - University of California San Diego</li>
+      
+      <li><span style="color: #00629B;">Adam Kowalski</span> - University of Colorado Boulder</li>
+
+      <li><span style="color: #00629B;">Yilen Gomez Maqueo Chew</span> - Universidad Nacional Autónoma de México</li>
+
+	    
+	  </ul>
+	</div> 
+	<div class="c6">
+	  <ul class="listing">
+	    
+	    
+      <li><span style="color: #00629B;">Max Moe</span> - University of Wyoming</li>
+      
+      <li><span style="color: #00629B;">Subhanjoy Mohanty</span> - Imperial College London</li>
+
+      <li><span style="color: #00629B;">Caroline Morley</span> - University of Texas Austin</li>
+
+      <li><span style="color: #00629B;">Phil Muirhead</span> - Boston University</li>
+
+	    <li><span style="color: #00629B;">Eric Sandquist (SOC co-Chair)</span> - San Diego State University</li>
+	    
+      <li><span style="color: #00629B;">Ricky Smart</span> - INAF</li>
+	    
+	    <li><span style="color: #00629B;">Beate Stelzer</span> - University of Tübingen</li>
+	   
+      <li><span style="color: #00629B;">Chris Theissen (SOC Chair)</span> - University of California San Diego</li>
+
+      <li><span style="color: #00629B;">Gerard van Belle</span> - Lowell Observatory</li>
+
+      <li><span style="color: #00629B;">Nicole Wallack</span> - Carnegie Earth & Planets Laboratory</li>
+
+      <li><span style="color: #00629B;">Kimberley Ward-Duong</span> - Smith College</li>
+
+      <li><span style="color: #00629B;">Bill Welsh (SOC co-Chair)</span> - San Diego State University</li>
+
+      <li><span style="color: #00629B;">Scott Wolk</span> - Harvard-Smithsonian Center for Astrophysics</li>
+
+      <li><span style="color: #00629B;">María Rosa Zapatero Osorio</span> - Centro de Astrobiología</li>
+
+      <li><span style="color: #00629B;">ZengHua Zhang</span> - Nanjing University</li>
+
+
+	    
+	  </ul>
+	</div> 
+      </div>
+      <div class="clearfix"></div>
+
+      <h2><span>LOC</span></h2>
+      <div class="row c12">
+	<p>To contact the SOC or LOC write
+	to: <a href="mailto:coolstars22sd@gmail.com">coolstars22sd@gmail.com</a></p>
+      </div>
+      <div class="row">
+	<div class="c6">
+	  <ul class="listing">
+	    
+      <li><span style="color: #00629B;">Aneesh Baburaj</span> - University of California San Diego</li>
+
+      <li><span style="color: #00629B;">Adam Burgasser</span> - University of California San Diego</li>
+
+      <li><span style="color: #00629B;">Preethi Karpoor</span> - University of California San Diego</li>
+      
+      <li><span style="color: #00629B;">Quinn Konopacky</span> - University of California San Diego</li>
+
+	    
+	  </ul>
+	</div> 
+	<div class="c6">
+	  <ul class="listing">
+	    
+      <li><span style="color: #00629B;">Jayke Nguyen</span> - University of California San Diego</li>
+
+      <li><span style="color: #00629B;">Emma Softich</span> - University of California San Diego</li>
+
+      <li><span style="color: #00629B;">Chris Theissen (LOC Chair)</span> - University of California San Diego</li>
+	    
+	  </ul>
+	</div> 
+      </div>
+      <div class="clearfix"></div>
+       
+       <h2><span>Organizing Institutions</span></h2>
+       <div class="row clearfix sponsor-logo">
+	 <div class="c3 img">
+	   <a href="http://www.ucsd.edu/english" target="_blank">
+             <img src="images/logo_ucsd.png" alt="UCSD logo">
+	   </a>
+         </div>
+	 <div class="c3 img">
+	   <a href="http://www.sdsu.edu" target="_blank">
+             <img src="images/logo_sdsu.png" alt="SDSU logo">
+	   </a>
+         </div>
+   <!--
+	 <div class="c3 img">
+	   <a href="http://irfu.cea.fr/dap/en/index.php" target="_blank">
+             <img src="images/logo_AIM.png" alt="AIM logo">
+	   </a>
+         </div>
+	 <div class="c3 img">
+	   <a href="http://www.irap.omp.eu/en" target="_blank">
+             <img src="images/logo_irap.png" alt="IRAP logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="https://ipag.osug.fr/?lang=en" target="_blank">
+             <img src="images/logo_ipag.png" alt="IPAG logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="https://www.univ-tlse3.fr/" target="_blank">
+             <img src="images/UT3.png" alt="UT3 logo">
+	   </a>
+	 </div>
+    -->
+       </div>
+	 
+       <h2><span>Sponsors</span></h2>
+       <div class="row clearfix sponsor-logo">
+	 <div class="c3 img">
+	   <a href="http://www.ucsd.edu" target="_blank">
+             <img src="images/logo_ucsd.png" alt="UCSD logo">
+	   </a>
+         </div>
+	 <div class="c3 img">
+	   <a href="https://nexsci.caltech.edu/" target="_blank">
+             <img src="images/logo_nexsci.jpeg" alt="NExScI logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="https://www.hsfoundation.org/" target="_blank">
+             <img src="images/logo_hsf.png" alt="HSF logo">
+	   </a>
+	 </div>
+   <!--
+	 <div class="c3 img">
+	   <a href="http://www.irap.omp.eu/en" target="_blank">
+             <img src="images/logo_irap.png" alt="IRAP logo">
+	   </a>
+         </div>
+	 <div class="c3 img">
+	   <a href="https://www.esa.int" target="_blank">
+             <img src="images/logo_esa.jpeg" alt="ESA logo">
+	   </a>
+	 </div>
+	  <div class="c3 img">
+	   <a href="http://www.iufrance.fr" target="_blank">
+             <img src="images/logo_iuf.png" alt="IUF logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="http://www.pnps.cnrs.fr" target="_blank">
+             <img src="images/logo_pnps.png" alt="PNPS logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="http://pnst.ias.u-psud.fr" target="_blank">
+             <img src="images/logo_pnst.jpg" alt="PNST logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="https://www.univ-tlse3.fr/" target="_blank">
+             <img src="images/UT3.png" alt="UT3 logo">
+	   </a>
+	 </div>
+	 <div class="c3 img">
+	   <a href="https://www.laregion.fr/" target="_blank">
+             <img src="images/occitanie.jpeg" alt="Occitanie logo">
+	   </a>
+	 </div>
+	 -->
+       </div>
+       
+
+       
+       <h2><span>Code of Conduct</span></h2>
+       <div class="c12 row">
+
+       <p>The Cool Stars 22 organizers are committed to making this meeting productive and enjoyable for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, ethnicity, nationality, or religion. We will not tolerate harassment of participants in any form. Please follow these guidelines:</p>
+
+	  <ul class="listing">
+	    <li>Behave professionally. Harassment and sexist, racist, or exclusionary comments or jokes are not appropriate. Harassment includes sustained disruption of talks or other events, inappropriate or unwelcome physical contact, sexual attention or innuendo, deliberate intimidation, stalking, and photography or recording of an individual without consent. It also includes offensive comments related to gender, sexual orientation, age, disability, physical appearance, body size, ethnicity, or religion.</li>
+	    <li>All communication should be appropriate for a professional audience of people from many different backgrounds. Sexual language and imagery is not appropriate.</li>
+	    <li>Be kind to others. Do not insult or put down other attendees.</li>
+	   </ul>
+
+	  <p>Participants asked to stop any inappropriate behavior are expected to comply immediately. Attendees violating these rules may be asked to leave the event at the sole discretion of the organizers without a refund of any charge.  The full <a href="docs/CS22_code_of_conduct.pdf">Cool Stars 22 Code of Conduct</a> is available as pdf.</p>
+
+       <p>Any participant who wishes to report a violation of this policy can do so anonymously via <a href="https://goo.gl/forms/UXtcpH5kwjskcvU52">google web form</a> or can contact LOC representatives ??? or ??? (see <a href="docs/CS22_code_of_conduct.pdf">CS 22 Code of Conduct</a> for contact information).</p>
+
+       <p>This code of conduct was originally designed for an astronomy conference in London, adapted by Andrew Pontzen and Hiranya Peiris from a document by Software Carpentry, which itself derives from original Creative Commons documents by PyCon and Geek Feminism.</p>
+
+<p><em>If you prefer to speak to someone who is not affiliated with the CS22 conference organizers, we encourage you to talk to <a href="http://www.astronomyallies.com/Astronomy_Allies/The_Allies.html">Astronomy Allies</a>. Several members of this group happen to attend the CS22 meeting.</em></p>
+       </div>
+       
+       <h2><span>Acknowledgements</span></h2>
+       <div class="c12 row">
+	 <ul class="listing">
+	   <li>Artwork: <a href="https://igpp.ucsd.edu/house-graphic-design" target="_blank">Jennifer Matthews (IGPP)</a> and Emma Softich</li>
+	   <li>Website template design by Veselka for <a
+       href="http://www.andreasviklund.com" target="_blank">andreasviklund.com</a> </li>
+	   <li>Website development based on <a href="https://github.com/coolstars20/coolstars20.github.io" target="_blank">CS20</a> and 
+      <a href="https://github.com/coolstars21/coolstars21.github.io" target="_blank">CS21</a> website source code
+       on github </li>
+	 </ul>
+       </div>
+
+       <h2><span>Previous Meetings</span></h2>
+       <div class="c12 row">
+	 <ul class="listing">
+     <li><a href="https://coolstars21.github.io/" target="_blank">CS 21</a> - Toulouse, France, July 2022</li>
+	   <li><a
+       href="http://coolstars20.cfa.harvard.edu/cs20half/index.html" target="_blank">CS 20.5</a> - online,
+       March 2021</li>
+	   <li><a href="http://coolstars20.cfa.harvard.edu/" target="_blank">CS 20</a> - Boston, USA, July 2018</li>
+	   <li><a href="http://www.astro.uu.se/~cool19/" target="_blank">CS 19</a> - Uppsala, Sweden, June 2016</li>
+	   <li><a
+       href="http://www2.lowell.edu/workshops/coolstars18/" target="_blank">CS 18</a> - Flagstaff, USA, June 2014</li>
+	   <li>CS 17 - Barcelona, Spain, June 2012</li>
+	   <li>CS 16 - Seattle, USA, August 2010</li>
+	   <li>CS 15 - St Andrews, UK, July 2008</li>
+	   <li><a
+       href="https://irsa.ipac.caltech.edu/data/SPITZER/docs/spitzermission/reportsandproceedings/meetings/coolstars14/"
+       target="_blank">CS 14</a> - Pasadena, USA, November 2006</li>
+	   <li>CS 13 - Hamburg, Germany, July 2004</li>
+	   <li><a href="http://cs12.colorado.edu" target="_blank">CS 12</a> - Boulder, USA, July 2001</li>
+	   <li>CS 11 - Tenerife, Spain, October 1999</li>
+	   <li>CS 10 - Cambridge, USA, 1997</li>
+	   <li>CS 9 - Florence, Italy, 1995</li>
+	   <li>CS 8 - Athens, USA, 1993</li>
+	   <li>CS 7 - Tucson, USA, 1991</li>
+	   <li>CS 6 - Seattle, USA, 1989</li>
+	   <li>CS 5 - Boulder, USA, 1987</li>
+	   <li>CS 4 - Santa Fe, USA, 1985</li>
+	   <li>CS 3 - Cambridge, USA, 1983</li>
+	   <li>CS 2 - Cambridge, USA, 1981</li>
+	   <li>CS 1.5 - NATO Advanced Study Institute, Bonas, France, 25 Aug - 5 Sep 1980</li>
+	   <li>The original CS (later renamed CS 1) - Cambridge, USA, Jan 1980</li>
+	 </ul>
+       </div> 
+
+       
+       <!--
+       <h2 id="CS23"><span>Cool Stars 23</span></h2>
+       <p>Cool Stars is a lot of fun to attend and also a lot of fun to
+      host. If you and your institution would like to host Cool Stars 23
+      please fill out the following application by <strong>June 1st, 2024</strong>. The location must
+      be outside of the USA since we alternate continents in
+      successive meetings. Your application will be reviewed by the SOC and
+      you will be invited to discuss the meeting details with the SOC during
+      Cool Stars 22.  The selection will be announced at the Banquet
+       on Thursday
+      June 27, 2024. To apply, please email a pdf file with answers to the
+      following questions to Chris Theissen, Chair of the CS22 SOC,
+      at <a href="mailto:coolstars22sd@gmail.com">coolstars22sd@gmail.com</a>. In
+      your application please discuss the following items:</p>
+
+       <ol>
+	 <li>Host institution(s)</li>
+	 <li>Lead scientist(s)</li>
+	 <li>Contact details: name, address, email, fax; other supporting scientists</li>
+	 <li>Proposed dates of meeting</li>
+	 <li>Proposed site of meeting</li>
+	 <li>Meeting/facility considerations (hotel, conference center, observatory? Size of meeting?)</li>
+	 <li>Transportation considerations (airports, public transportation, travel time, ease of access etc.)</li>
+	 <li>Rooming/hotel considerations (range of facilities/cost)</li>
+	 <li>Experience of the host institution and lead scientists in running scientific meetings</li>
+	 <li>Potential sources of financial support in addition to registration fees</li>
+	 <li>Why should CS23 be held here?</li>
+	 <li>Projected science themes for CS23</li>
+	 <li>Anything else we should know?</li>
+      </ol>
+      <p>Submissions received by June 1, 2024, will receive first consideration.</p>
+      
+      
+      &nbsp
+      </div>
+      -->
+
+    </div>
+    <!--FOOTER-->
+    <div class="footer">
+      <div class="container clearfix">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2024 <a href="mailto:coolstars22sd@gmail.com" target="_top">CS22 LOC</a></p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+    <script>
+
+    // Initialize the map   
+    // latitude and longitude
+    var coords = [43.63, 1.44];
+    // zoom level
+    var zoomLevel = 12;
+
+    // mapid is the id of the div where the map will appear
+    var map = L.map('mapid').setView(coords, zoomLevel);
+
+    // Tile type: openstreetmap normal
+    var openstreetmap = L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    maxZoom: 20
+    })
+
+    // Tile type: openstreetmap Hot
+    var openstreetmapHot = L.tileLayer(
+    'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    maxZoom: 20
+    })
+
+    // Tile type: openstreetmap Osm
+    var openstreetmapOsm = L.tileLayer(
+    'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    maxZoom: 20
+    })
+
+    //Base layers definition and addition
+    var allOptions = {
+    "Open streetmap": openstreetmap,
+    "Open streetmap: Hot": openstreetmapHot,
+    "Open streetmap: Osm": openstreetmapOsm
+    };
+
+    // Initialize with openstreetmap
+    openstreetmap.addTo(map);
+
+    // Add scale
+    L.control.scale().addTo(map);
+    
+    // Add baseLayers to map as control layers
+    L.control.layers(allOptions).addTo(map);
+
+    // Add feature on map related to convention centre
+    L.marker([43.611289, 1.434654]).addTo(map).bindPopup('Pierre Baudis<br> Convention Centre').openPopup();
+
+    // Add feature related to welcome drinks (Jacobins)
+    var icon = L.divIcon({
+	className: 'custom-div-icon',
+        html: "<div style='background-color:red;' class='marker-pin'></div><i class='material-icons'>local_bar</i>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+    });
+    var marker = L.marker([43.603350, 1.439929], {
+	icon: icon
+    }).addTo(map);
+
+    // Add feature related to banquet (aeroscopia)
+    icon = L.divIcon({
+	className: 'custom-div-icon',
+	html: "<div style='background-color:red;' class='marker-pin'></div><i class='material-icons'>restaurant</i>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+    });
+    marker = L.marker([43.660097, 1.360595], {
+	icon: icon
+    }).addTo(map);
+
+    // Add feature related to banquet (Jolimont picnic)
+    icon = L.divIcon({
+	className: 'custom-div-icon',
+	html: "<div style='background-color:green;' class='marker-pin'></div><i class='material-icons'>restaurant</i>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+    });
+    marker = L.marker([43.61232, 1.46243], {
+	icon: icon
+    }).addTo(map);
+	
+    </script>
+    
+  </body>
 </html>
