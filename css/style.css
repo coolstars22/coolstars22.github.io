@@ -8,9 +8,9 @@ h1 {margin: 0;font-weight:400;}
 canvas{display: inline-block;}
 a {color: #00629B;text-decoration: none;}
 a:hover,a:focus {color: #00629B;text-decoration: underline;outline: none;}
-p {margin-bottom: 20px; margin-top: 10px; text-align: justify;text-justify: inter-word;}
-ol {margin-left: 20px;margin-bottom: 20px;}
-ul,ol {margin-top: 5px;margin-bottom: 20px; text-align: justify;text-justify: inter-word;}
+p {margin: 20px 0;}
+ol {padding: 20px;}
+ul,ol {margin-top: 0;margin-bottom: 10px;}
 ul ul,ol ul,ul ol,ol ol {margin-bottom: 0;}
 
 
@@ -39,8 +39,8 @@ ul ul,ol ul,ul ol,ol ol {margin-bottom: 0;}
 .c5 {width: 41.66666666666667%;}
 .c4 {width: 33.33333333333333%;}
 .c3 {width: 25%;}
-.c2 {width: 20%;}
-.c1 {width: 14.28%;}
+.c2 {width: 16.666666666666664%;}
+.c1 {width: 8.333333333333332%;}
 
 .sticky {min-height: 100%;height: auto !important;height: 100%;margin: 0 auto -30px;}
 .push {height: 30px;clear: both;}
@@ -138,7 +138,6 @@ ul.social li a.in:hover{background-position: -350px -100px;}
 /* CONTENT ================================================== */
 .intro-text {font-size:2.05em;text-align:center;line-height:1.5em;font-weight:normal;color:#00629B}
 .welcome-text {font-size:1.05em;text-align:center;line-height:1.5em;font-weight:normal;font-style: italic;}
-.soc-text {font-size:1.05em;text-align:left;line-height:1.5em;font-weight:normal;color:#00629B}
 .button-list {font-size:1.2em;text-align:center;line-height:1.5em;font-weight:normal;}
 h2 {background:transparent url('../cs22icons/sep-line.gif') repeat-x 0 51%;font-size:1.25em;margin:20px 0;}
 h2 span{background: #fff; padding-right: 20px;color:#00629B;font-weight:400;}
@@ -151,9 +150,9 @@ h3 {color:#00629B;font-weight:400;}
 .portfolio-thumb img {padding:5px;display:block;margin:0 auto;height:100%;width:100%;}
 
 .about img {display:block;margin:0 auto;}
-.name {color:#00629B;font-size:1.143em;font-weight:600;text-align:center;}
+.name {color:#00629B;font-size:1.143em;font-weight:600;margin:0;}
 .position {margin:0 0 20px;}
-.listing {margin-left: 20px; text-align: justify;text-justify: inter-word;}
+.listing {margin: 15px;}
 .sponsor-logo img {max-height:100px}
 .rightlinks {text-align: right;margin-bottom: 5px}
 .locationschedule {margin: 10px 0;}
@@ -221,45 +220,7 @@ div.highlightbox p {
   color: #000000;
 }
 
-splinter_author {color: #696969; font-weight: bold;}
-
-/* FEATURES ON MAP ===============================================================*/
-.marker-pin {
-  width: 30px;
-  height: 30px;
-  border-radius: 50% 50% 50% 0;
-  background: #c30b82;
-  position: absolute;
-  transform: rotate(-45deg);
-  left: 50%;
-  top: 50%;
-  margin: -15px 0 0 -15px;
-}
-.marker-pin::after {
-    content: '';
-    width: 24px;
-    height: 24px;
-    margin: 3px 0 0 3px;
-    background: #fff;
-    position: absolute;
-    border-radius: 50%;
- }
-.custom-div-icon i {
-   position: absolute;
-   width: 22px;
-   font-size: 22px;
-   left: 0;
-   right: 0;
-   margin: 10px auto;
-   text-align: center;
-}
-.custom-div-icon i.awesome {
-   margin: 12px auto;
-   font-size: 17px;
-}
-
-
-/* CFA FOOTER ===============================================================*/
+/* UCSD FOOTER ===============================================================*/
 .leaf {display: inline; border-right: 1px solid; color: white;
        padding-right: 8px;}
 .last {border-right: medium none;}
