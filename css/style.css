@@ -278,7 +278,7 @@ tr.shown td.details-control {
   .navbar-wrapper .navbar {padding-left: 0;padding-right:0;}
   .carousel {height: 300px;margin-bottom: 25px;}
   .carousel .item {height: 300px;}
-  .carousel-inner > .item > img {height: 300px;}
+  .carousel-inner > .item > img {height: 300px; object-fit: cover; object-position: center top;}
   .carousel-control .glyphicons-chevron-left,.carousel-control .glyphicons-chevron-right,.carousel-control .icon-prev,.carousel-control .icon-next {width: 30px;height: 30px;margin-top: -15px;margin-left: -15px;font-size: 30px;}
   .carousel-indicators {bottom: 20px;}
 }
@@ -286,7 +286,7 @@ tr.shown td.details-control {
   .container {width: 970px;}
   .carousel {height: 400px;margin-bottom: 30px;}
   .carousel .item {height: 400px;}
-  .carousel-inner > .item > img {height: 400px;}
+  .carousel-inner > .item > img {height: 400px; object-fit: cover; object-position: center top;}
   .c3.charts {width:25%;}
 }
 @media (min-width: 1200px) {
@@ -314,7 +314,7 @@ tr.shown td.details-control {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,.navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #444444;background-color: transparent;}
   .carousel {height: 200px;margin-bottom: 20px;}
   .carousel .item {height: 200px;}
-  .carousel-inner > .item > img {height: 200px;}
+  .carousel-inner > .item > img {height: 200px; object-fit: cover; object-position: center top;}
   .contactform textarea {width:79%;}
 }
 @media print {
