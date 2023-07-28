@@ -250,7 +250,7 @@ tr.shown td.details-control {
 
 /* RESPONSIVE CSS ================================================== */
 @media (min-width: 768px) {
-  .container {width: 750px;}
+  .container {width: auto;}
   .c3.charts {width:50%;}
   .navbar-right .dropdown-menu {right: 0;left: auto;}
   .navbar-header {float: left;}
@@ -275,7 +275,7 @@ tr.shown td.details-control {
   .navbar-text {margin-right: 15px;margin-left: 15px;}
   .welcome-text {padding:0 100px;}
   .navbar-wrapper .container {padding-left:  0;padding-right: 0;}
-  .navbar-wrapper .navbar {padding-left: 0;padding-right:0;}
+  .navbar-wrapper .navbar {padding-left: 25px;padding-right: 25px;}
   .carousel {height: 300px;margin-bottom: 25px;}
   .carousel .item {height: 300px;}
   .carousel-inner > .item > img {height: 300px; object-fit: cover; object-position: center top;}
@@ -283,14 +283,14 @@ tr.shown td.details-control {
   .carousel-indicators {bottom: 20px;}
 }
 @media (min-width: 992px) {
-  .container {width: 970px;}
+  .container {width: auto;}
   .carousel {height: 400px;margin-bottom: 30px;}
   .carousel .item {height: 400px;}
   .carousel-inner > .item > img {height: 400px; object-fit: cover; object-position: center top;}
   .c3.charts {width:25%;}
 }
 @media (min-width: 1200px) {
-  .container {width: 1170px;}
+  .container {width: auto;}
 }
 @media (max-width: 767px) {
   .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11 {width:100%;}
@@ -300,7 +300,7 @@ tr.shown td.details-control {
   .navbar-nav .open .dropdown-menu > li > a,.navbar-nav .open .dropdown-menu .dropdown-header {padding: 5px 15px 5px 25px;}
   .navbar-nav .open .dropdown-menu > li > a {line-height: 20px;}
   .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-nav .open .dropdown-menu > li > a:focus {background-image: none;}
-  .navbar-brand{margin:10px 0 0 10px;background-position: -1px -57px;padding:5px 15px 30px 30px;}
+  .navbar-brand{margin:5.5px 0 0 10px;background-position: -1px -57px;padding:5px 15px 30px 30px;}
   .navbar-form .form-group {margin-bottom: 5px;}
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #777777;}
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {color: #333333;background-color: transparent;}
