@@ -159,6 +159,10 @@ h3 {color:#00629B;font-weight:400;}
 .rightlinks {text-align: right;margin-bottom: 5px}
 .locationschedule {margin: 10px 0;}
 
+.customIndent {
+  padding-left: 2em;
+}
+
 .button {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
