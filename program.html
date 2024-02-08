@@ -1,430 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
-    <meta name="description" content="Cool Stars 22, workshop, conference">
-    <meta name="author" content="CS22 LOC">
-    <link rel="shortcut icon" href="favicon.png">
-    <title>Welcome</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
-    <script src="js/chart.js"></script>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+	<meta name="description" content="Cool Stars 22, workshop, conference">
+	<meta name="author" content="CS22 LOC">
+	<link rel="shortcut icon" href="favicon.png">
+	<title>Welcome</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+	<script src="js/chart.js"></script>
 
-    
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin=""/>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-      <![endif]-->
-    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+	<link
+	href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin=""/>
+</head>
 
-    <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+	<div class="sticky">
+		<!-- NAVBAR ================================================== -->
+		<div class="top-bar">
+			<div class="container clearfix">
+				<a href="mailto:coolstars22sd@gmail.com" target="_top">coolstars22sd@gmail.com</a>
+				<ul class="social">
+					<!-- <li><a href="https://www.facebook.com/groups/1464538487100756/" class="fb"></a></li> -->
+					<li><a href="https://twitter.com/coolstars22" class="tw"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="navbar-wrapper">
+			<div class="container">
+				<div class="navbar navbar-inverse navbar-static-top clearfix" role="navigation">
+					<div class="navbar-header clearfix">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"></a></h1>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							
+							<li><a href="index.html">Welcome</a></li>
+							
+							<!--<li><a href="participants.html">Participants</a></li>-->
+							
+							<li><a class="active" href="program.html">Program</a></li>
+							
+							<li><a href="splinters.html">Splinters</a></li>
+							
+							<li><a href="hybrid.html">Hybrid Meeting</a></li>
 
-  </head>
+							<li><a href="registration.html">Registration</a></li>
+							
+							<li><a href="travel.html">Logistics</a></li>
+							
+							<li><a href="excursions.html">Excursions</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <body>
-  <div class="sticky">
-    <!-- NAVBAR ================================================== -->
-    <div class="top-bar">
-      <div class="container clearfix">
-	<a href="mailto:coolstars22sd@gmail.com" target="_top">coolstars22sd@gmail.com</a>
-        <ul class="social">
-          <!-- <li><a href="https://www.facebook.com/groups/1464538487100756/" class="fb"></a></li> -->
-          <li><a href="https://twitter.com/coolstars22" class="tw"></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="navbar-wrapper">
-      <div class="container">
-        <div class="navbar navbar-inverse navbar-static-top clearfix" role="navigation">
-            <div class="navbar-header clearfix">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <h1><a class="navbar-brand" href="index.html"></a></h1>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
+		<!-- Content -->
 		
-		<li><a href="index.html">Welcome</a></li>
-		
-		<!--<li><a href="participants.html">Participants</a></li>-->
-		
-		<li><a class="active" href="program.html">Program</a></li>
-		
-		<li><a href="splinters.html">Splinters</a></li>
-		
-		<li><a href="hybrid.html">Hybrid Meeting</a></li>
 
-    <li><a href="registration.html">Registration</a></li>
-		
-		<li><a href="travel.html">Logistics</a></li>
-		
-		<li><a href="excursions.html">Excursions</a></li>
-		
-               </ul>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Content -->
-    
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
-processEscapes: true}
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="js/abstractstab.js"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				processEscapes: true}
+			});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script src="js/abstractstab.js"></script>
 
 
-<div class="container clearfix mt-100 mb-20">
-	<div class="c12 row">
-		<p style="font-size: 50px; font-family: varino" class="intro-text">COOL STARS 22</p>
-  </div>
-  <div class="c12 row">
-  	<p class="intro-text">24&ndash;28 June 2024, San Diego, California, USA</p>
-  </div>
-  <div class="c12 row">
-  	<p class="welcome-text">The "Cambridge Workshops on Cool Stars, Stellar Systems and the Sun" are held biennially and have evolved to be the premier conference series for cool star research.</p>
-  </div>
+		<div class="container clearfix mt-100 mb-20">
+			<div class="c12 row">
+				<p style="font-size: 50px; font-family: varino" class="intro-text">COOL STARS 22</p>
+			</div>
+			<div class="c12 row">
+				<p class="intro-text">24&ndash;28 June 2024, San Diego, California, USA</p>
+			</div>
+			<div class="c12 row">
+				<p class="welcome-text">The "Cambridge Workshops on Cool Stars, Stellar Systems and the Sun" are held biennially and have evolved to be the premier conference series for cool star research.</p>
+			</div>
 
 
+			<div class="c12 row">
+				<p class="button-list">
+					<a href="https://forms.gle/tJTDXAA1WJnCQrAe7" class="button">Submit abstract</a>
+					<a href="https://cvent.me/DkxoER?locale=en-US" class="button">Register for conference</a>
+					<a href="grants.html" class="button">Request financial assistance</a>
+				</p>
+			</div>
+			
+  		<!-- 
+  		<div class="c12 row">
+   		<p><strong><big>We are thrilled to announce that CS23 will be held in >>> in 2026!</big></strong></p>	 
+  		</div>
+  	-->
+
+	 		<!-- 
       <div class="c12 row">
-        <p class="button-list">
-          <a href="https://forms.gle/tJTDXAA1WJnCQrAe7" class="button">Submit abstract</a>
-          <a href="https://cvent.me/DkxoER?locale=en-US" class="button">Register for conference</a>
-          <a href="grants.html" class="button">Request financial assistance</a>
-        </p>
+	 		<p><strong><big><a href="registration.html">Remote registration</a> is still open until June 10th.</big></strong></p>
+	 	-->
+	 	
+	 		<!-- 
+	 		<p><strong><big><span style="color: #c95c50;"> Warning!</span> Several SOC members of splinters have received fraudulent phone calls proposing to book flights and hotels. They pretend to work with the organizers of CS21, which is not the case. It is likely that they got your name and institute from this website, and expect to get your credit card details. We recommend to be extremely careful, and to not provide any personal details to them!</big></p></strong>
+
       </div>
-  
-  <!-- 
-  <div class="c12 row">
-   	<p><strong><big>We are thrilled to announce that CS22 will be held in San Diego in 2024!</big></strong></p>	 
-  </div>
-       
-  <div class="c12 row">
-	 <p><strong><big>With the still ongoing pandemics,
-	 the next edition of the CoolStars conference, Cool Stars 21,
-	 will be held in a hybrid format (both in-person and online) in
-	 Toulouse in 2022, from the 4th to the 9th of July.  Please
-	  <a
-	 href="https://docs.google.com/forms/d/e/1FAIpQLSe-lQMuclciAj-722TXzeZ0s8OC-6_uK_sjKtakZbj3HsHZTg/viewform?usp=sf_link/">join
-	 the pre-registered mailing list</a> if you wish to have news
-	 and updates about the conference.
-	 </big></strong></p>	 
-       </div>
-       &nbsp
-  -->
+    -->
+    
+    <div class="c12 row">
 
-       <div class="c12 row">
-	 <!-- 
-	 <p><strong><big><a href="registration.html">Remote registration</a>
-	  is still open until June 30th.</big></strong></p>
-	 -->
-	 
-	 <!-- 
-	 <p><strong><big><span style="color: #c95c50;"> Warning!</span> Several SOC members of splinters
- 	 have received fraudulent phone calls proposing to book
- 	 flights and hotels. They pretend to work with the organisers
- 	 of CS21, which is not the case. It is likely that
- 	 they got your name and institute from this website, and
- 	 expect to get your credit card details. We recommend to be
- 	 extremely careful, and to not provide any personal details to them!
- 	 </big></p></strong>
-	 -->
+			<!--
+      <p>Video recordings and slides for most talks are posted. See links for each abstract on the <a href="abstracts.html">abstract page.</a></p>
 
-	 <!--
-	 &nbsp
-	 <p><strong><big><span style="color: #c95c50;"> CORONAVIRUS INFORMATION:</span></big></strong></p>
-	 -->
-	 <!--
-	 <p><strong><big>The organizers are monitoring daily the
-	 evolution of coronavirus worldwide and how this may affect
-	 international travel and large meetings. At the moment, most
-	 effective travel bans do not have a known duration and may be
-	 lifted before the date of the CS21 conference and as of today
-	 (March 11th) we have not been asked by the French government
-	 or the organizing Research institutes to cancel/postpone the
-	 conference. As a consequence, CS21 is still scheduled to be
-	 held as planned on the week of 22nd of June
-	 2020.</big></strong></p>
-	 -->
-	 
-	 <!--
-	 <p><strong><big>We, therefore, encourage everyone to submit
-	 abstracts and register. Any registration will be 100%
-	 refunded if (a) the meeting has to be cancelled or (b) if you
-	 decide to cancel your participation less than 60 days after
-	 your registration.</big></strong></p>
-	 -->
-	 
-       </div>
-       
-       <div class="c12 row">
+      <p>Please submit <a href="contributions.html#Proceedings">proceedings</a> until <strong>November 15th (deadline extended)</strong>. Check out our <a href="proceedings.html">detailed instructions</a>.</p>
+      </div>
+    -->
+  		<!--     
+  		<div class="c12 row">
+    		<p class="button-list">
+      	<a href="docs/CS21booklet.pdf" class="button">Abstract booklet (pdf)</a>
+      	<a href="https://cs21-virtual.inviteo.fr/" target="_blank"class="button">Hybrid platform</a>
+      	<a href="docs/CS21photo.jpg" class="button">Group photo (26 Mo)</a>
+      	<a href="zenodo.html" class="button">Submit a proceeding</a>
+    		</p>
+  		</div>
+  	-->
 
-	<!--
-        <p>Video recordings and slides for most talks are posted. See links
-        for each abstract on the <a href="abstracts.html">abstract
-        page.</a></p>
+  	<h2><span>Schedule</span></h2>
+  	<p>We reserve the right to make adjustments to the schedule.</p>
+  	<table class="schedule" border="2">
+  		<tr class="title">
+  			<td>Time</td>
+  			<td>Sunday</td>
+  			<td>Monday</td>
+  			<td>Tuesday</td>
+  			<td>Wednesday</td>
+  			<td>Thursday</td>
+  			<td>Friday</td>
+  			<td>Saturday</td>
+  		</tr>
+  		<tr class="title">
+  			<td></td>
+  			<td>6/23</td>
+  			<td>6/24</td>
+  			<td>6/25</td>
+  			<td>6/26</td>
+  			<td>6/27</td>
+  			<td>6/28</td>
+  			<td>6/29</td>
+  		</tr>
+  		<tr class="title">
+  			<td>Topic</td>
+  			<td></td>
+  			<td><a href="program.html#theme1">New Insights into Star Formation and Evolution</a></td>
+  			<td><a href="program.html#theme2">Milky Way-scale Science and Big Data</a></td>
+  			<td><a href="program.html#theme3">The Sun and Cool Stars in the Time Domain</a></td>
+  			<td><a href="program.html#theme4">Cool Stars as Stellar Systems</a></td>
+  			<td><a href="program.html#theme5">Brown Dwarfs and Giant Exoplanets: Future Prospects and Thirty Years of Discovery</a></td>
+  			<td></td>
+  		</tr>
 
-        <p>Please
-        submit <a href="contributions.html#Proceedings">proceedings</a>
-        until <strong>November 15th (deadline extended)</strong>. Check out our <a href="proceedings.html">detailed instructions</a>.</p>
-       </div>
-       -->
-  <!--     
-  <div class="c12 row">
-    <p class="button-list">
-      <a href="docs/CS21booklet.pdf" class="button">Abstract booklet (pdf)</a>
-      <a href="https://cs21-virtual.inviteo.fr/" target="_blank"class="button">Hybrid platform</a>
-      <a href="docs/CS21photo.jpg" class="button">Group photo (26 Mo)</a>
-      <a href="zenodo.html" class="button">Submit a proceeding</a>
-    </p>
-  </div>
-  -->
-      
-  <h2><span>Schedule</span></h2>
-  <p>We reserve the right to make adjustments to the schedule.</p>
-	<table class="schedule" border="2">
-	  <tr class="title">
-	    <td>Time</td>
-	    <td>Sunday</td>
-	    <td>Monday</td>
-	    <td>Tuesday</td>
-	    <td>Wednesday</td>
-	    <td>Thursday</td>
-	    <td>Friday</td>
-	    <td>Saturday</td>
-	  </tr>
-	  <tr class="title">
-	    <td></td>
-	    <td>6/23</td>
-	    <td>6/24</td>
-	    <td>6/25</td>
-	    <td>6/26</td>
-	    <td>6/27</td>
-	    <td>6/28</td>
-	    <td>6/29</td>
-	  </tr>
-	  <tr class="title">
-	    <td>Topic</td>
-	    <td></td>
-	    <td>New Insights into Star Formation and Evolution</td>
-	    <td>Milky Way-scale Science and Big Data</td>
-	    <td>The Sun and Cool Stars in the Time Domain</td>
-	    <td>Cool Stars as Stellar Systems</td>
-	    <td>Brown Dwarfs and Giant Exoplanets: Future Prospects and Thirty Years of Discovery</td>
-	    <td></td>
-	  </tr>
+  		<tr>
+  			<td class="time">08:00-08:45</td>
+  			<td></td>
+  			<td class="socialac" rowspan="1"> Registration & welcome address </td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  			<td class="socialac" rowspan="18">TBD</td>
+  		</tr>
 
-	  <tr>
-	    <td class="time">08:00-08:45</td>
-	    <td></td>
-	    <td class="socialac" rowspan="1"> Registration & welcome address </td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	    <td class="socialac" rowspan="18">TBD</td>
-	  </tr>
-	  
-	  <tr>
-	    <td class="time">08:45-09:15</td>
-	    <td></td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	  </tr>
-	  <tr>
-	    <td class="time">09:15-10:00</td>
-	    <td></td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	  </tr>
-	  
-	  <tr>
-	    <td class="time">10:00-10:15</td>
-	    <td></td>
-	    <!--<td class="break">Coffee break + <a href="abstracts.html#posters">Posters</a></td>-->
-	    <td class="break">Frank Shu in memoriam</td>
-	    <td class="break" rowspan="2">Coffee break + Posters</td>
-	    <td class="break" rowspan="2">Coffee break + Posters</td>
-	    <td class="break" rowspan="2">Coffee break + Posters</td>
-	    <td class="break" rowspan="2">Coffee break + Posters</td>
-	  </tr>
+  		<tr>
+  			<td class="time">08:45-09:15</td>
+  			<td></td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  		</tr>
+  		<tr>
+  			<td class="time">09:15-10:00</td>
+  			<td></td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  		</tr>
 
-	  <tr>
-	    <td class="time">10:15-10:50</td>
-	    <td></td>
-	    <!--<td class="break">Coffee break + <a href="abstracts.html#posters">Posters</a></td>-->
-	    <td class="break">Coffee break + Posters</td>
-	  </tr>
+  		<tr>
+  			<td class="time">10:00-10:15</td>
+  			<td></td>
+  			<!--<td class="break">Coffee break + <a href="abstracts.html#posters">Posters</a></td>-->
+  			<td class="break">Frank Shu in memoriam</td>
+  			<td class="break" rowspan="2">Coffee break + Posters</td>
+  			<td class="break" rowspan="2">Coffee break + Posters</td>
+  			<td class="break" rowspan="2">Coffee break + Posters</td>
+  			<td class="break" rowspan="2">Coffee break + Posters</td>
+  		</tr>
 
-	  <tr>
-	    <td class="time">10:50-11:25</td>
-	    <td></td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-	    <td class="plenary">Invited Talk</td>
-		    
-	  </tr>
-	  <tr>
-	    <td class="time">11:25-12:30</td>
-	    <td></td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	    <td class="plenary" rowspan="1">Contributed Talks</td>
-	  </tr>
-	  
-	  <tr>
-	    <td class="time">12:30-14:00</td>
-	    <td></td>
-	    <td class="break">Lunch break</td>
-	    <td class="break">Lunch break</td>
-	    <td class="break">Lunch break</td>
-	    <td class="break">Lunch break</td>
-	    <td class="socialac" rowspan="1">Concluding remarks</td>
-	  </tr>
+  		<tr>
+  			<td class="time">10:15-10:50</td>
+  			<td></td>
+  			<!--<td class="break">Coffee break + <a href="abstracts.html#posters">Posters</a></td>-->
+  			<td class="break">Coffee break + Posters</td>
+  		</tr>
 
-	   <tr>
-	    <td class="time">14:00-15:30</td>
-	    <td></td>
-	    <td class="splinter">Splinter sessions</td>
-	    <td class="splinter">Splinter sessions</td>
-	    <td class="socialac" rowspan="6"><a href="excursions.html#excursions">Excursions</a></td>
-	    <td class="splinter">Splinter sessions</td>
-	    <td></td>
-	  </tr>
-	  <tr>
-	    <td class="time">15:30-16:00</td>
-	    <td></td>
-	    <td class="break">Coffee break + Posters</td>
-	    <td class="break">Coffee break + Posters</td>
-	    <td class="socialac" rowspan="7">Banquet</td>
-	    <td></td>
-	  </tr>
-	  <tr>
-	    <td class="time">16:00-17:30</td>
-	    <td></td>
-	    <td class="splinter">Splinter sessions</td> 
-	    <td class="splinter">Splinter sessions</td> 
-	    <td></td>
-	  </tr>
-	  <tr>
-	    <td class="time">17:30-18:00</td>
-	    <td></td>
-	    <td class="break">Posters</td>
-	    <td class="break">Posters</td>
-	    <td></td>
-	  </tr>
-	  
-	  <tr>
-	    <td class="time"> 18:00-18:30 </td>
-	    <td class="socialac" rowspan="5"> Pre-registration & Professional Development Event </td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	  </tr>
+  		<tr>
+  			<td class="time">10:50-11:25</td>
+  			<td></td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
+  			<td class="plenary">Invited Talk</td>
 
-	  <tr>
-	    <td class="time"> 18:30-19:00 </td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	  </tr>
+  		</tr>
+  		<tr>
+  			<td class="time">11:25-12:30</td>
+  			<td></td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  			<td class="plenary" rowspan="1">Contributed Talks</td>
+  		</tr>
 
-	  <tr>
-	    <td class="time"> 19:00-20:30 </td>
-	    <td></td>
-	    <td></td>
-	    <td class="socialac" rowspan="1"> Public Event </td>
-	    <td></td>
-	  </tr>
+  		<tr>
+  			<td class="time">12:30-14:00</td>
+  			<td></td>
+  			<td class="break">Lunch break</td>
+  			<td class="break">Lunch break</td>
+  			<td class="break">Lunch break</td>
+  			<td class="break">Lunch break</td>
+  			<td class="socialac" rowspan="1">Concluding remarks</td>
+  		</tr>
 
-	  <tr>
-	    <td class="time"> 20:30-21:00 </td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	  </tr>
-	 
-	  <tr>
-	    <td class="time"> 22:00-22:00 </td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	    <td></td>
-	  </tr>
+  		<tr>
+  			<td class="time">14:00-15:30</td>
+  			<td></td>
+  			<td class="splinter">Splinter sessions</td>
+  			<td class="splinter">Splinter sessions</td>
+  			<td class="socialac" rowspan="6"><a href="excursions.html#excursions">Excursions</a></td>
+  			<td class="splinter">Splinter sessions</td>
+  			<td></td>
+  		</tr>
+  		<tr>
+  			<td class="time">15:30-16:00</td>
+  			<td></td>
+  			<td class="break">Coffee break + Posters</td>
+  			<td class="break">Coffee break + Posters</td>
+  			<td class="socialac" rowspan="7">Banquet</td>
+  			<td></td>
+  		</tr>
+  		<tr>
+  			<td class="time">16:00-17:30</td>
+  			<td></td>
+  			<td class="splinter">Splinter sessions</td> 
+  			<td class="splinter">Splinter sessions</td> 
+  			<td></td>
+  		</tr>
+  		<tr>
+  			<td class="time">17:30-18:00</td>
+  			<td></td>
+  			<td class="break">Posters</td>
+  			<td class="break">Posters</td>
+  			<td></td>
+  		</tr>
 
-	</table>
-      &nbsp
-     
-      
-      <h2><span>Invited Speakers</span></h2>
-      <div class="c12 row">
-	<p>We are excited to announce that the following invited speakers have agreed to give plenary talks at Cool Stars 22!
-</p></div>
-       <ul class="listing">      
-       	<li>Benoît Commerçon (Centre de Recherche Astrophysique de Lyon | École Normale Supérieure de Lyon)</li>
-       	<li>Jonathan Gagné (Planétarium Rio Tinto Alcan | Espace pour la vie)</li>
-       	<li>Davy Kirkpatrick (Caltech | Infrared Processing and Analysis Center)</li>
-       	<li>Karine Perraut (L'Institut de Planétologie et d'Astrophysique de Grenoble | Observatoire de Grenoble)</li>
-       	<li>Ansgar Reiners (Georg-August-Universität Göttingen | Institut für Astrophysik und Geophysik)</li>
-       	<li>Céline Reylé (Observatoire de Besançon)</li>
-       	<li>Bárbara Rojas-Ayala (Universidad de Tarapacá)</li>
-       	<li>Marco Velli (Institute of Geophysics and Planetary Physics | University of California Los Angeles)</li>
-       	<li>Johanna Vos (Dublin Institute for Advanced Studies)</li>
-       	<li>Lily Zhao (Flatiron Institute | Center for Computational Astrophysics)</li>
-    </ul>
-      
+  		<tr>
+  			<td class="time"> 18:00-18:30 </td>
+  			<td class="socialac" rowspan="5"> Pre-registration & Professional Development Event </td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  		</tr>
+
+  		<tr>
+  			<td class="time"> 18:30-19:00 </td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  		</tr>
+
+  		<tr>
+  			<td class="time"> 19:00-20:30 </td>
+  			<td></td>
+  			<td></td>
+  			<td class="socialac" rowspan="1"> Public Event </td>
+  			<td></td>
+  		</tr>
+
+  		<tr>
+  			<td class="time"> 20:30-21:00 </td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  		</tr>
+
+  		<tr>
+  			<td class="time"> 22:00-22:00 </td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+  		</tr>
+
+  	</table>
+  	&nbsp
+
+  	<h2><span>Program</span></h2>
+  	<div class="c12 row">
+  		<p>The meeting will cover the following five science themes:
+  		</p>
+  	</div>
+  	<h3 id="theme1">New Insights into Star Formation and Evolution</h3>
+  	<p>Recent advances in observational and theoretical tools allow us to now study star formation age ages and scales previously unavailable to astronomers.  Radio and IR instruments routinely penetrate to depths on 100 Av.  Meanwhile, interferometric techniques are resolving angular size to a few milli-arcsecs.  These tools put us on the precipice of directly testing theoretical principles of the flow of matter from the molecular cloud through the disk down to the star…and back out again. We focus in this session on stars from just before the onset of Class 0 to the very end of Class II (user-defined).
+  	</p>
+  	<h3 id="theme2">Milky Way-scale Science and Big Data</h3>
+  	<p>The gathering and analysis of Milky Way-scale samples of stars is already underway, but the available data will expand dramatically in the next few years with the full Gaia dataset, Rubin/LSST, Euclid, and Roman. What new science will emerge from these datasets? How can these datasets be exploited? What additional data is needed? What tools need to be developed to analyze the data?
+  	</p>
+  	<h3 id="theme3">The Sun and Cool Stars in the Time Domain</h3>
+  	<p>We are entering a new era of continuous monitoring of the Sun and other cool stars.  Kepler, K2, and TESS have provided new views of stellar activity cycles, seismology, and explosive events on scales previously not accessible.  In situ, high spectral resolution, and spatially-resolved data of the Sun and its immediate environment have shown how the temporal regime is necessary to understand the physical processes responsible for its variability, and by extension, the variability of other stars.  Many unsolved problems remain in the time-domain, from the origin of activity cycle variability and angular momentum evolution over long timescales, to the physics of transient explosive events such as flares of all sizes, and coronal mass ejections.  In this session, we focus on the origin and manifestation of the time-dependent physical processes in cool stars and the Sun, and we invite contributions in both theoretical and observational areas.
+  	</p>
+  	<h3 id="theme4">Cool Stars as Stellar Systems</h3>
+  	<p>This session aims to put cool stars in the context of stellar systems. It includes all aspects of the creation and interactions of cool stars: their fundamental properties, their multiplicity at close and wide separations, their chemical abundances, their magnetic fields, and activity. The session also includes cool stars as hosts of planetary systems and/or disks and their interactions. 
+  	</p>
+  	<h3 id="theme5">Brown Dwarfs and Giant Exoplanets: Future Prospects and Thirty Years of Discovery</h3>
+  	<p>Cool Stars 9 in 1995 marked the first definitive detections of both brown dwarfs and exoplanets, with the announcements of Teide 1, GL 229 B, and 51 Pegasi b all occurring in the same year. The past 30 years have led to extraordinary growth in the fields of brown dwarf and exoplanet science. The spectral classes L, T, and Y have been defined and refined. A theoretical framework has been developed, centered on our growing understanding of chemistry and clouds in substellar atmospheres. However, many open fields of research remain. How do atmospheric dynamics shape chemistry, clouds, and weather? How are brown dwarf magnetic fields driven, and to what extent do they differ from cool stars and giant planets? How do brown dwarfs form, and how can we infer their formation mechanisms from atmospheric compositions or other properties? What is the nature of planetary systems around cool stars and brown dwarfs? In this session, we will present a retrospective view of the immense progress made over the past three decades, discuss the wealth of data coming from new facilities such as JWST, and look forward to exciting prospects of future facilities (ELTs, space missions such as the Nancy Roman Space Telescope, and more) in terms of unraveling the mysteries of substellar objects.
+  	</p>
+
+
+  	<h2><span>Invited Speakers</span></h2>
+  	<div class="c12 row">
+  		<p>We are excited to announce that the following invited speakers have agreed to give plenary talks at Cool Stars 22!
+  		</p></div>
+  		<ul class="listing">      
+  			<li>Benoît Commerçon (Centre de Recherche Astrophysique de Lyon | École Normale Supérieure de Lyon)</li>
+  			<li>Jonathan Gagné (Planétarium Rio Tinto Alcan | Espace pour la vie)</li>
+  			<li>Davy Kirkpatrick (Caltech | Infrared Processing and Analysis Center)</li>
+  			<li>Karine Perraut (L'Institut de Planétologie et d'Astrophysique de Grenoble | Observatoire de Grenoble)</li>
+  			<li>Ansgar Reiners (Georg-August-Universität Göttingen | Institut für Astrophysik und Geophysik)</li>
+  			<li>Céline Reylé (Observatoire de Besançon)</li>
+  			<li>Bárbara Rojas-Ayala (Universidad de Tarapacá)</li>
+  			<li>Marco Velli (Institute of Geophysics and Planetary Physics | University of California Los Angeles)</li>
+  			<li>Johanna Vos (Dublin Institute for Advanced Studies)</li>
+  			<li>Lily Zhao (Flatiron Institute | Center for Computational Astrophysics)</li>
+  		</ul>
+
 
       <!--
       <h2><span>Plan of conference venue</span></h2>
@@ -437,17 +400,19 @@ processEscapes: true}
       </div>
       //-->
 
-  </div>
     </div>
-    <!--FOOTER-->
-    <div class="footer">
-      <div class="container clearfix">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2024 <a href="mailto:coolstars22sd@gmail.com" target="_top">CS22 LOC</a></p>
-      </div>
-    <div class="container ta-c">
   </div>
+</div>
+<!--FOOTER-->
+<div class="footer">
+	<div class="container clearfix">
+		<p class="pull-right"><a href="#">Back to top</a></p>
+		<p>&copy; 2024 <a href="mailto:coolstars22sd@gmail.com" target="_top">CS22 LOC</a></p>
+	</div>
+	<div class="container ta-c">
+	</div>
+</div>
 
-    
-  </body>
+
+</body>
 </html>
