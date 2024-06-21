@@ -43,20 +43,33 @@
     <p id="title">SAN DIEGO...well technically LA JOLLA</p>
     <br>
     <!-- And make it cheesy ! -->
-    <p id='textbody'>In a galaxy not so far away, Neon Rusk has amassed the resources of the entire Sol system. Meanwhile, CheatGPT has become ubiquitous in everyday life, helping people with everything from writing emails to ordering groceries...and finishing assignments.</p> 
-    <p id='textbody'>The James Webb Space Telescope and Euclid have launched and are producing stunning images and spectra of cool stars, brown dwarfs, and giant exoplanets. The Rubin Legacy Survey of Space and Time is on the horizon, with first light later this year (or next).</p> 
-    <p id='textbody'>It is a time of great scientific prosperity, however, something is about to take place in San Diego (well, La Jolla). A rogue group of astrophysicsists and astronomers who care only about the coolest stars (and brown dwarfs and planets) are about to overwhelm the Sol system with a deluge of talks, plots, posters, science, and most importantly, KARAOKE....</p>        
+    <p id='textbody'>In a galaxy not so far away, Elan Tusk has amassed the resources of the entire Sol system. Meanwhile, CheatGPT has become ubiquitous in everyday life, helping people with everything from writing emails to ordering groceries...and finishing assignments.</p> 
+    <p id='textbody'>The James Webb Space Telescope and Euclid have launched and are producing stunning images and spectra of cool stars, brown dwarfs, and giant exoplanets. The Rubin Legacy Survey of Space and Time is on the horizon, with first light later this year...or next.</p> 
+    <p id='textbody'>It is a time of great scientific prosperity, however, something is about to take place in San Diego (well...La Jolla). A rogue group of astrophysicsists and astronomers who care only about the coolest stars (and brown dwarfs and planets) are about to overwhelm the Sol system with a deluge of talks, plots, posters, science, and most importantly, KARAOKE....</p>        
   </div>  
 
   <audio id="audio">
         <source src="https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star Wars Theme Song By John Williams.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
   </audio>
-    <script>
+<script>
         window.onload = function() {
             setTimeout(function() {
-                document.getElementById('audio').play();
-            }, 8500); // 5000 milliseconds = 5 seconds
+                var audio = document.getElementById('audio');
+                audio.play();
+
+                setTimeout(function() {
+                    var fadeAudio = setInterval(function() {
+                        if (audio.volume > 0.1) {
+                            audio.volume -= 0.1;
+                        } else {
+                            audio.volume = 0;
+                            clearInterval(fadeAudio);
+                        }
+                    }, 3000); // Decrease volume every 200ms
+                }, 60000); // Start fading after 10 seconds
+
+            }, 8200); // 5000 milliseconds = 5 seconds
         };
     </script>    
 </div>  
