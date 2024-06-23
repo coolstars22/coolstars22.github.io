@@ -134,7 +134,7 @@ body {
 
 /* Set the scrolling animation and position it */
 #content {
-  animation: scroll 100s linear 16s;
+  animation: scroll 120s linear 16s;
   position: absolute;
   top: 100%;
 }
